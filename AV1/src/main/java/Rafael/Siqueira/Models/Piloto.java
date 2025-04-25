@@ -1,23 +1,22 @@
 package Rafael.Siqueira.Models;
 
-import Rafael.Siqueira.Models.Equipe;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-public class piloto {
+public class Piloto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-
+    private int idade;
     private String categoria;
 
-    private int idade;
-
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "equipe_id")
     private Equipe equipe;

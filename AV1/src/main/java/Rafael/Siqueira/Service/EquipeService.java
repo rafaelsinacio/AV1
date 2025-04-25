@@ -6,22 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EquipeService {
 
     @Autowired
-    private EquipeRepository EquipeRepository;
+    private EquipeRepository equipeRepository;
 
     public List<Equipe> list() {
-        return EquipeRepository.findAll();
+        return equipeRepository.findAll();
     }
 
     public Equipe criar(Equipe equipe) {
-        return EquipeRepository.save(equipe);
+        return equipeRepository.save(equipe);
     }
 
-    public void delete(Equipe equipe) {
-        EquipeRepository.delete(equipe);
+    public Equipe buscarPorId(Long id) {
+        Optional<Equipe> equipe = equipeRepository.findById(id);
+        return equipe.orElse(null);
+    }
+
+    public void deletar(Long id) {
+        equipeRepository.deleteById(id);
     }
 }

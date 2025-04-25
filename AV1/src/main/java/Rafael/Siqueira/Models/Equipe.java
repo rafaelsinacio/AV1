@@ -1,6 +1,6 @@
 package Rafael.Siqueira.Models;
 
-import Rafael.Siqueira.Models.piloto;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
@@ -15,6 +15,7 @@ public class Equipe {
 
     private String nome;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "equipe", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<piloto> pilotos;
+    private List<Piloto> pilotos;
 }

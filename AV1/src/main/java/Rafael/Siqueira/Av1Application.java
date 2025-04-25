@@ -1,4 +1,4 @@
-package Rafael.Siqueira.AV1;
+package Rafael.Siqueira;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

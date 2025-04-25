@@ -1,7 +1,7 @@
 package Rafael.Siqueira.Repository;
 
-import Rafael.Siqueira.Models.piloto;
+import Rafael.Siqueira.Models.Piloto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PilotoRepository extends JpaRepository <piloto, Long> {
+public interface PilotoRepository extends JpaRepository<Piloto, Long> {
 }
