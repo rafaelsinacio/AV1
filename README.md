@@ -31,8 +31,8 @@ Postman ou outro cliente HTTP para testar a API
 
 Configuração
 
-Clone o repositório (se aplicável):
-git clone <URL_DO_REPOSITORIO>
+Clone o repositório:
+git clone https://github.com/rafaelsinacio/AV1.git
 
 
 Configure o banco de dados:
